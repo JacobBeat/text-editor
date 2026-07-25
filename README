@@ -1,0 +1,10 @@
+Usage:
+
+-a {line number} {input file} (optional){output file} "string"
+appends string to end of line # line number, leaves input unchanged if output provided otherwise edits input
+
+-r {line number} {input file} (optional){output file} "string"
+replaces line # line number with string, leaves input unchanged if output provided otherwise edits input
+
+-p (optional){line number} {input file}
+prints line # line number of input file, if none provided prints whole file
