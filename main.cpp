@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
             "unchanged if output provided otherwise edits input\n";
     cout << "-r {line number} {input file} (optional){output file} \"string\"\n"
          << "replaces line # line number with string, leaves input unchanged "
-            "if output provied otherwise edits input\n";
+            "if output provided otherwise edits input\n";
     cout << "-p (optional){line number} {input file}\n"
          << "prints line # line number of input file, if none provided prints "
             "whole file\n";
