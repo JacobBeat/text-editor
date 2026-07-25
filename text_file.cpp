@@ -1,3 +1,4 @@
+#include "text_file.hpp"
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
@@ -6,44 +7,41 @@
 
 using namespace std;
 
-class TextFile {
-private:
-  vector<string> data; // each element of data should be a line in the file
-public:
-  void read(ifstream &fin) { // Loads each line of fin into data
-    for (string s; fin >> s;) {
-      data.push_back(s);
-    }
+void TextFile::read(ifstream &fin) { // Loads each line of fin into data
+  for (string s; fin >> s;) {
+    data.push_back(s);
   }
-  void write(ofstream &fout) { // Writes out data to fout
-    for (string s : data) {
-      fout << s << "\n";
-    }
+}
+void TextFile::write(ofstream &fout) { // Writes out data to fout
+  for (string s : data) {
+    fout << s << "\n";
   }
-  void replace(const string &output,
-               int number) { // replaces line # number with string output
-    if (number >= size(data)) {
-      throw invalid_argument("Attempted to access outside of file");
-    }
-    data[number] = output;
+}
+void TextFile::replace(
+    const string &output,
+    int number) { // replaces line # number with string output
+  if (number >= size(data)) {
+    throw invalid_argument("Attempted to access outside of file");
   }
-  void append(const string &output,
-              int number) { // adds string output to end of line # number
-    if (number >= size(data)) {
-      throw invalid_argument("Attempted to access outside of file");
-    }
-    data[number] += (" " + output);
+  data[number] = output;
+}
+void TextFile::append(
+    const string &output,
+    int number) { // adds string output to end of line # number
+  if (number >= size(data)) {
+    throw invalid_argument("Attempted to access outside of file");
   }
-  void printline() {
-    for (int line = 0; line < size(data); line++) {
-      cout << "Line " << line << ": " << data[line] << "\n";
-    }
+  data[number] += (" " + output);
+}
+void TextFile::printline() {
+  for (int line = 0; line < size(data); line++) {
+    cout << "Line " << line << ": " << data[line] << "\n";
   }
-  void printline(int line) {
-    if (line >= size(data)) {
-      throw invalid_argument("Attempted to access outside of file");
-    }
-    cout << "Line: " << line << "\n" << data[line] << "\n";
+}
+void TextFile::printline(int line) {
+  if (line >= size(data)) {
+    throw invalid_argument("Attempted to access outside of file");
   }
-  TextFile() : data() {};
-};
+  cout << "Line: " << line << "\n" << data[line] << "\n";
+}
+TextFile::TextFile() : data() {};
