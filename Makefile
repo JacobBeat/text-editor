@@ -1,10 +1,7 @@
-edit: main.o 
+edit: main.o text_file.o 
 	g++ main.o text_file.o -o edit
 
-text_file.o: text_file.cpp
-	g++ -c text_file.cpp
-
-main.o: main.cpp
-	g++ -c main.cpp
-
-
+main.o: main.cpp  
+	g++ -c main.cpp  
+text_file.o: text_file.cpp 
+	g++ -c text_file.cpp 
