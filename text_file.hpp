@@ -1,6 +1,6 @@
 #ifndef TEXT_FILE_H
 #define TEXT_FILE_H
-
+#pragma once
 #include <fstream>
 #include <string>
 #include <vector>

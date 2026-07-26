@@ -1,7 +1,6 @@
 #include "text_file.hpp"
 #include <cstring>
 #include <iostream>
-#pragma once
 
 using namespace std;
 
