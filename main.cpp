@@ -1,8 +1,7 @@
 #include "text_file.hpp"
 #include <cstring>
-#include <fstream>
 #include <iostream>
-#include <string>
+#pragma once
 
 using namespace std;
 

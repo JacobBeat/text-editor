@@ -1,3 +1,6 @@
+#ifndef TEXT_FILE_H
+#define TEXT_FILE_H
+
 #include <fstream>
 #include <string>
 #include <vector>
@@ -17,3 +20,5 @@ public:
   void printline(int line);
   TextFile();
 };
+
+#endif
