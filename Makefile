@@ -1,5 +1,5 @@
 edit: main.o text_file.o 
-	g++ main.o text_file.o -o edit && rm *.o 
+	g++ main.o text_file.o -o edit 
 
 main.o: main.cpp  
 	g++ -c main.cpp  
